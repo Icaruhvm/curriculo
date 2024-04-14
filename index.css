@@ -46,7 +46,7 @@ h2.titulo span{
     color: blue;
 }
 
-button:hover{
+button:hover, form .btn-enviar input[type=submit]:hover{
     box-shadow: 0px 0px 8px rgb(45, 45, 248);
     transform: scale(1.05);
     transition: .2s;
@@ -54,7 +54,7 @@ button:hover{
 
 /* Estilo do cabeçalho */
 header{
-    padding: 40px 4%;
+    padding: 100px 4%;
 }
 
 header > .interface{
@@ -86,7 +86,7 @@ header nav ul li{
 
 /* topo do site */
 section.topo-do-site{
-    padding: 40px 4%;
+    padding: 100px 4%;
 }
 
 section.topo-do-site .flex{
@@ -108,7 +108,7 @@ section.topo-do-site .flex{
 
 /* Skills */
 section.especialidades{
-    padding: 80px 4%;
+    padding: 100px 4%;
 }
 
 section.especialidades .flex{
@@ -141,7 +141,7 @@ section.especialidades .flex{
 
 /* Estilo sobre */
 section.sobre{
-    padding: 80px 4%;
+    padding: 100px 4%;
 }
 
 section.sobre .flex{
@@ -177,3 +177,83 @@ section.sobre .flex{
     margin: 0 5px;
 }
 
+/* Portfolio */
+section.portifolio{
+    padding: 100px 4%;
+    box-shadow: 0 0 40px 10px rgba(128, 128, 128, 0.301);
+}
+
+section.portifolio .interface h2{
+    margin-bottom: 40px;
+}
+
+section.portifolio .interface p{
+    color: white;
+}
+
+/* formulario */
+section.formulario{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #242424;
+    border: none;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 18px;
+}
+
+form textarea{
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input[type=submit]{
+    width: 120px;
+    cursor: pointer;
+    background-color: blue;
+    color: black;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1020px){
+    /* classes gerais */
+    .flex{
+        flex-direction: column;
+    }
+
+    .topo-do-site .flex{
+        flex-direction: column-reverse;
+    }
+
+    /* cabeçalho */
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+
+    /* topo do site */
+    .topo-do-site h1{
+        font-size: 30px;
+    }
+
+
+}
