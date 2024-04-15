@@ -52,6 +52,10 @@ button:hover, form .btn-enviar input[type=submit]:hover{
     transition: .2s;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* Estilo do cabeçalho */
 header{
     padding: 100px 4%;
