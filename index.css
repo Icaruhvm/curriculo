@@ -145,7 +145,7 @@ section.especialidades .flex{
 
 /* Estilo sobre */
 section.sobre{
-    padding: 100px 4%;
+    padding: 200px 4%;
 }
 
 section.sobre .flex{
@@ -183,7 +183,7 @@ section.sobre .flex{
 
 /* Portfolio */
 section.portifolio{
-    padding: 100px 4%;
+    padding: 200px 4%;
     box-shadow: 0 0 40px 10px rgba(128, 128, 128, 0.301);
 }
 
@@ -197,7 +197,7 @@ section.portifolio .interface p{
 
 /* formulario */
 section.formulario{
-    padding: 80px 4%;
+    padding: 200px 4%;
 }
 
 form{
@@ -257,6 +257,10 @@ form .btn-enviar input[type=submit]{
     /* topo do site */
     .topo-do-site h1{
         font-size: 30px;
+    }
+
+    .topo-do-site .img-topo-do-site img{
+        width: 80%;
     }
 
 
