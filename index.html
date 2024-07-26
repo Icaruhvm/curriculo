@@ -120,23 +120,45 @@
     </section>
 </section>
 
-<section id="contact">
-    <section class="formulario">
-        <div class="interface">
-            <h2 class="titulo">Contact <span>Me</span></h2>
+        <section id="contact">
+            <section class="formulario">
+                <div class="interface">
+                    <h2 class="titulo">Contact <span>Me</span></h2>
 
-            <form action="">
-                <input type="text" name="" id="" placeholder="Your Name:" required>
-                <input type="text" name="" id="" placeholder="Your Email:" required>
-                <input type="text" name="" id="" placeholder="Your Phone Number:">
-                <textarea name="" id="" placeholder="Your message goes here"></textarea>
-                <div class="btn-enviar"><input type="submit" value="Send"></div>
-            </form>
-        </div>
-    </section>
-</section>
+                    <form id="contact-form">
+                        <input type="text" name="name" placeholder="Your Name:" required>
+                        <input type="email" name="email" placeholder="Your Email:" required>
+                        <input type="tel" name="phone" placeholder="Your Phone Number:">
+                        <textarea name="message" placeholder="Your message goes here"></textarea>
+                        <div class="btn-enviar">
+                            <input type="submit" value="Send">
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </section>
 
     </main>
 
+    <!-- Script do EmailJS -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("w0MLa197QuBqktgXr");
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            emailjs.sendForm('service_9vcryle', 'template_ra0bcew', this)
+                .then(function() {
+                    alert('Mensagem enviada com sucesso!');
+                    document.getElementById('contact-form').reset();
+                }, function(error) {
+                    alert('Falha ao enviar a mensagem: ' + JSON.stringify(error));
+                });
+        });
+    </script>
 </body>
 </html>
+
